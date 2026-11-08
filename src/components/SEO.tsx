@@ -10,8 +10,8 @@ interface SEOProps {
 
 export const SEO: React.FC<SEOProps> = ({
   title,
-  description = 'MEHTYS is an engineering technology company founded by two co-founders, building resilient software products, applied AI systems, and high-performance digital solutions.',
-  keywords = 'MEHTYS, software engineering, AI tools, Code Bridge, developer tools, digital solutions, cloud architecture',
+  description = 'MEHTYS is an independent, early-stage technology venture founded by Tyson Garfield and Mehvish (Ajmeri), building useful software products and practical digital tools.',
+  keywords = 'MEHTYS, MTCodeBridge, MTCB, MTnote, technology venture, developer tools, knowledge organizer, Tyson Garfield, Mehvish Ajmeri',
   image = '/mehtys-logo.jpeg',
 }) => {
   const location = useLocation();

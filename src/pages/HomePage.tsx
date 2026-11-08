@@ -2,19 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import BrandLogo from '../components/BrandLogo';
-import { projectsData } from '../data/projects';
+import { productsData } from '../data/projects';
 import { 
   ArrowRight, 
   Clock, 
-  Users
+  Users, 
+  Target, 
+  Compass, 
+  CheckCircle2, 
+  Code2, 
+  FileText 
 } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
   return (
     <div className="pt-24 pb-16">
       <SEO 
-        title="Intelligent Software, AI Tools & Digital Solutions" 
-        description="MEHTYS is an independent technology company founded by Tyson Garfield and Mehvish (Ajmeri), building software products, AI tools, and digital solutions."
+        title="Early-Stage Technology Venture" 
+        description="MEHTYS is an independent, early-stage technology venture founded by Tyson Garfield and Mehvish (Ajmeri), currently developing its first products: MTCodeBridge (MTCB) and MTnote."
       />
 
       {/* Hero Section */}
@@ -24,27 +29,26 @@ export const HomePage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            {/* Left Column: Mission & Identity */}
+            {/* Left Column: Identity & Mission */}
             <div className="lg:col-span-7 space-y-6 text-left">
               
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-800/60 text-cyan-300 text-xs font-mono font-medium tracking-wide">
                 <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
-                <span>INDEPENDENT TECHNOLOGY COMPANY</span>
+                <span>EARLY-STAGE TECHNOLOGY VENTURE</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
-                Building intelligent software,{' '}
+                Building useful, accessible technology that solves{' '}
                 <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">
-                  AI tools
-                </span>
-                , and digital solutions.
+                  practical problems
+                </span>.
               </h1>
 
               <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-light">
-                MEHTYS is an independent technology company focused on engineering software products, applied artificial intelligence tools, and purposeful digital platforms.
+                MEHTYS is an independent, early-stage venture currently developing its first software products. We focus on straightforward engineering, practical utility, and software that makes digital work simpler.
               </p>
 
-              {/* Co-Founders Display (Prominent on Home) */}
+              {/* Co-Founders Display */}
               <div className="pt-6 border-t border-slate-800/80">
                 <div className="text-xs font-mono uppercase text-slate-400 tracking-wider mb-3 flex items-center gap-2">
                   <Users className="w-3.5 h-3.5 text-cyan-400" />
@@ -62,14 +66,21 @@ export const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Action Link */}
-              <div className="pt-2">
+              {/* Action Links */}
+              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
-                  to="/projects"
+                  to="/products"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-mono text-xs uppercase tracking-wider font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-md shadow-cyan-500/20 transition-all group"
                 >
-                  <span>Explore Projects</span>
+                  <span>View Products</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+
+                <Link
+                  to="/about"
+                  className="px-6 py-3.5 rounded-xl font-mono text-xs uppercase tracking-wider font-semibold text-slate-300 hover:text-white bg-slate-900 border border-slate-800 hover:bg-slate-800 transition-colors"
+                >
+                  Our Philosophy
                 </Link>
               </div>
 
@@ -86,7 +97,7 @@ export const HomePage: React.FC = () => {
                   MEHTYS
                 </div>
                 <div className="text-xs font-mono text-cyan-400 mt-1">
-                  Technology Company
+                  Early-Stage Venture
                 </div>
                 <p className="text-xs text-slate-400 mt-3 font-light leading-relaxed">
                   Founded by Tyson Garfield and Mehvish (Ajmeri).
@@ -98,84 +109,132 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Projects Overview */}
+      {/* The Two Products Section */}
       <section className="py-20 border-t border-slate-800/80 bg-[#060b15]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
             <div>
               <div className="text-xs font-mono uppercase tracking-wider text-cyan-400 font-semibold mb-1">
-                PROJECT PORTFOLIO
+                CURRENT PRODUCTS
               </div>
               <h2 className="text-3xl font-extrabold text-white">
-                Projects Overview
+                Products in Development
               </h2>
             </div>
-            <Link
-              to="/projects"
-              className="text-xs font-mono text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1"
-            >
-              <span>View all projects</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+            <p className="text-xs font-mono text-slate-400">
+              Our initial development focus
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projectsData.map((project) => (
-              <div
-                key={project.id}
-                className="glass-card-interactive p-6 rounded-2xl flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-mono uppercase px-2.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
-                      {project.status}
-                    </span>
-                    <span className="text-[11px] font-mono text-slate-500">
-                      {project.category}
-                    </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {productsData.map((product) => {
+              const isBridge = product.id === 'mtcodebridge';
+              return (
+                <div
+                  key={product.id}
+                  className="glass-card-interactive p-8 rounded-2xl flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-cyan-400">
+                        {isBridge ? <Code2 className="w-6 h-6" /> : <FileText className="w-6 h-6" />}
+                      </div>
+                      <span className="text-[11px] font-mono uppercase px-3 py-1 rounded bg-slate-900 border border-slate-800 text-cyan-300 font-semibold">
+                        {product.status}
+                      </span>
+                    </div>
+
+                    <div className="text-[11px] font-mono text-slate-500 uppercase tracking-wider mb-1">
+                      {product.category}
+                    </div>
+
+                    <h3 className="text-2xl font-bold text-white mb-3">
+                      {product.name}
+                    </h3>
+
+                    <p className="text-sm text-slate-300 leading-relaxed font-light mb-8">
+                      {product.description}
+                    </p>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white mb-2">
-                    {project.name}
-                  </h3>
-
-                  <p className="text-xs text-slate-300 leading-relaxed font-light mb-6">
-                    {project.description}
-                  </p>
+                  <div className="pt-4 border-t border-slate-800/80 flex items-center gap-2 text-xs font-mono text-slate-400 bg-slate-950/60 p-3 rounded-lg border border-slate-800/60">
+                    <Clock className="w-4 h-4 text-cyan-400 shrink-0" />
+                    <span className="text-xs">{product.accessNotice}</span>
+                  </div>
                 </div>
+              );
+            })}
+          </div>
 
-                <div className="pt-4 border-t border-slate-800/80 flex items-center gap-2 text-xs font-mono text-slate-400">
-                  <Clock className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-                  <span className="text-[11px]">{project.accessNotice}</span>
-                </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision Preview */}
+      <section className="py-20 border-t border-slate-800/80 bg-[#070d19]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="glass-panel p-8 rounded-2xl border border-slate-800 space-y-4">
+              <div className="w-10 h-10 rounded-lg bg-cyan-950/60 border border-cyan-800/60 flex items-center justify-center text-cyan-400">
+                <Target className="w-5 h-5" />
               </div>
-            ))}
+              <h3 className="text-xl font-bold text-white">Our Mission</h3>
+              <p className="text-sm text-slate-300 font-light leading-relaxed">
+                Build useful, accessible technology that solves practical problems. We design software from first principles to help users accomplish daily tasks without unnecessary overhead.
+              </p>
+            </div>
+
+            <div className="glass-panel p-8 rounded-2xl border border-slate-800 space-y-4">
+              <div className="w-10 h-10 rounded-lg bg-indigo-950/60 border border-indigo-800/60 flex items-center justify-center text-indigo-400">
+                <Compass className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-white">Our Vision</h3>
+              <p className="text-sm text-slate-300 font-light leading-relaxed">
+                Gradually develop a portfolio of independent software products that make everyday digital work simpler, faster, and more efficient.
+              </p>
+            </div>
+          </div>
+
+          {/* Philosophy Pillars */}
+          <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-800">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-xs font-mono uppercase tracking-wider text-cyan-400 font-semibold">
+                OUR CORE PHILOSOPHY
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mt-1">
+                How We Approach What We Build
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                'Build for real problems.',
+                'Keep products simple and useful.',
+                'Prefer practical engineering over unnecessary complexity.',
+                'Use AI where it genuinely adds value.',
+                'Improve through real user feedback.',
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3 bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <span className="text-xs text-slate-200 font-medium leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center pt-8">
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 underline underline-offset-4"
+              >
+                <span>Read our full philosophy and approach &rarr;</span>
+              </Link>
+            </div>
           </div>
 
         </div>
       </section>
 
-      {/* About Link Card */}
-      <section className="py-16 border-t border-slate-800/80 bg-[#070d19]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
-            Learn more about MEHTYS
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-300 font-light max-w-xl mx-auto leading-relaxed">
-            Read about the company background, our founders Tyson Garfield and Mehvish (Ajmeri), and our project roadmap.
-          </p>
-          <div className="pt-2">
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-mono text-xs uppercase tracking-wider font-semibold text-slate-200 bg-slate-900 hover:bg-slate-800 border border-slate-700/80 transition-colors"
-            >
-              <span>About MEHTYS & Founders</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

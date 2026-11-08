@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 // Pages
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import ProjectsPage from './pages/ProjectsPage';
+import ProductsPage from './pages/ProductsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 export const App: React.FC = () => {
@@ -21,11 +21,11 @@ export const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            {/* Redirect legacy/contact URLs to About page */}
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/projects" element={<ProductsPage />} />
+            {/* Redirect legacy paths */}
             <Route path="/contact" element={<Navigate to="/about" replace />} />
-            <Route path="/products" element={<Navigate to="/projects" replace />} />
-            <Route path="/services" element={<Navigate to="/projects" replace />} />
+            <Route path="/services" element={<Navigate to="/products" replace />} />
             <Route path="/signin" element={<Navigate to="/" replace />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>

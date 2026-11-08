@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
             </Link>
             
             <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed max-w-md">
-              MEHTYS is an independent technology company founded by Tyson Garfield and Mehvish (Ajmeri), building software products, AI tools, and digital solutions.
+              MEHTYS is an independent, early-stage technology venture founded by Tyson Garfield and Mehvish (Ajmeri), currently developing its first software products.
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
                 <Link to="/about" className="hover:text-cyan-300 transition-colors">About & Founders</Link>
               </li>
               <li>
-                <Link to="/projects" className="hover:text-cyan-300 transition-colors">Projects Showcase</Link>
+                <Link to="/products" className="hover:text-cyan-300 transition-colors">Products</Link>
               </li>
             </ul>
           </div>

@@ -44,7 +44,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
             MEHTYS
           </span>
           <span className="text-[10px] tracking-widest text-cyan-400 font-mono uppercase -mt-1 font-medium">
-            LABS & SYSTEMS
+            TECHNOLOGY VENTURE
           </span>
         </div>
       )}
