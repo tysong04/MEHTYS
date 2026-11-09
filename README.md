@@ -91,10 +91,40 @@ The original artwork, proportions, and metallic finish are preserved with 100% f
 
 ---
 
-## 🌐 Cloudflare Pages Deployment (When Ready)
+## 🌐 Cloudflare Deployment
 
-The project includes `public/_redirects` (`/* /index.html 200`) and `public/_headers` for single-page routing and edge security.
+MEHTYS is configured for deployment using **Cloudflare Workers with Static Assets** via Wrangler (and is also compatible with Cloudflare Pages).
 
+### Cloudflare Workers (Static Assets) via Wrangler
+
+Single-page application (SPA) routing is handled natively via `wrangler.jsonc`:
+```jsonc
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mehtys",
+  "compatibility_date": "2026-11-09",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
+```
+
+With `not_found_handling: "single-page-application"`, direct navigation and browser refreshes on routes such as `/about` and `/products` automatically serve `/index.html` (HTTP 200) for client-side routing, avoiding invalid recursive redirects.
+
+Edge security and caching headers are served via `public/_headers` (copied to `dist/_headers` upon build).
+
+#### Deploying with Wrangler:
+1. Build production assets:
+   ```bash
+   npm run build
+   ```
+2. Deploy to Cloudflare Workers:
+   ```bash
+   npx wrangler deploy
+   ```
+
+### Cloudflare Pages (Alternative)
 - **Framework preset**: `Vite`
 - **Build command**: `npm run build`
 - **Build output directory**: `dist`
