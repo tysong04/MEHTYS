@@ -22,8 +22,8 @@ export const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/products" element={<ProductsPage />} />
-            <Route path="/projects" element={<ProductsPage />} />
             {/* Redirect legacy paths */}
+            <Route path="/projects" element={<Navigate to="/products" replace />} />
             <Route path="/contact" element={<Navigate to="/about" replace />} />
             <Route path="/services" element={<Navigate to="/products" replace />} />
             <Route path="/signin" element={<Navigate to="/" replace />} />

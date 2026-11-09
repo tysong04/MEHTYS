@@ -8,6 +8,8 @@ interface SEOProps {
   image?: string;
 }
 
+const BASE_URL = 'https://mehtys.techeo.workers.dev';
+
 export const SEO: React.FC<SEOProps> = ({
   title,
   description = 'MEHTYS is an independent, early-stage technology venture founded by Tyson Garfield and Mehvish (Ajmeri), building useful software products and practical digital tools.',
@@ -36,15 +38,30 @@ export const SEO: React.FC<SEOProps> = ({
       tag.setAttribute('content', content);
     };
 
+    // Construct full URLs
+    const currentPath = location.pathname === '/' ? '/' : location.pathname;
+    const fullUrl = `${BASE_URL}${currentPath}`;
+    const fullImageUrl = image.startsWith('http') ? image : `${BASE_URL}${image}`;
+
+    // Helper to update or create canonical link tag
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', fullUrl);
+
     updateMeta('description', description);
     updateMeta('keywords', keywords);
     updateMeta('og:title', fullTitle, true);
     updateMeta('og:description', description, true);
-    updateMeta('og:url', `https://mehtys.com${location.pathname}`, true);
-    updateMeta('og:image', image, true);
+    updateMeta('og:url', fullUrl, true);
+    updateMeta('og:image', fullImageUrl, true);
     updateMeta('twitter:title', fullTitle);
     updateMeta('twitter:description', description);
-    updateMeta('twitter:image', image);
+    updateMeta('twitter:url', fullUrl);
+    updateMeta('twitter:image', fullImageUrl);
   }, [title, description, keywords, image, location.pathname]);
 
   return null;
