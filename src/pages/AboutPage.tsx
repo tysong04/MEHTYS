@@ -17,7 +17,7 @@ export const AboutPage: React.FC = () => {
     <div className="pt-28 pb-20 bg-[#060b15]">
       <SEO 
         title="About Us, Founders & Philosophy" 
-        description="Learn about MEHTYS, an early-stage technology venture founded by Tyson Garfield and Mehvish (Ajmeri). Discover our mission, vision, philosophy, and approach to technology."
+        description="Learn about MEHTYS, an early-stage technology venture founded by Tyson Garfield and Ajmeri Khatoon. Discover our mission, vision, philosophy, and approach to technology."
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,10 +69,10 @@ export const AboutPage: React.FC = () => {
             {/* Founder 2 */}
             <div className="glass-panel rounded-2xl p-8 border border-slate-800 text-center flex flex-col items-center">
               <div className="w-20 h-20 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center text-indigo-400 text-2xl font-bold font-mono mb-5 shadow-lg">
-                MA
+                AK
               </div>
               <h3 className="text-xl font-bold text-white tracking-wide">
-                MEHVISH (AJMERI)
+                AJMERI KHATOON
               </h3>
               <div className="text-xs font-mono uppercase text-indigo-400 mt-1 font-semibold tracking-wider">
                 Co-Founder

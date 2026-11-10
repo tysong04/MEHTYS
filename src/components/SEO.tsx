@@ -12,8 +12,8 @@ const BASE_URL = 'https://mehtys.techeo.workers.dev';
 
 export const SEO: React.FC<SEOProps> = ({
   title,
-  description = 'MEHTYS is an independent, early-stage technology venture founded by Tyson Garfield and Mehvish (Ajmeri), building useful software products and practical digital tools.',
-  keywords = 'MEHTYS, MTCodeBridge, MTCB, MTnote, technology venture, developer tools, knowledge organizer, Tyson Garfield, Mehvish Ajmeri',
+  description = 'MEHTYS is an independent, early-stage technology venture founded by Tyson Garfield and Ajmeri Khatoon, building useful software products and practical digital tools.',
+  keywords = 'MEHTYS, MTCodeBridge, MTCB, MTnote, technology venture, developer tools, knowledge organizer, Tyson Garfield, Ajmeri Khatoon',
   image = '/mehtys-logo.jpeg',
 }) => {
   const location = useLocation();

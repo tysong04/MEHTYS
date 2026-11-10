@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
             </Link>
             
             <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed max-w-md">
-              MEHTYS is an independent, early-stage technology venture founded by Tyson Garfield and Mehvish (Ajmeri), currently developing its first software products.
+              MEHTYS is an independent, early-stage technology venture founded by Tyson Garfield and Ajmeri Khatoon, currently developing its first software products.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
               <div className="text-[11px] font-mono text-cyan-400">Co-Founder</div>
             </div>
             <div className="space-y-1.5 text-xs text-slate-300 pt-2">
-              <div className="font-medium text-white">MEHVISH (AJMERI)</div>
+              <div className="font-medium text-white">AJMERI KHATOON</div>
               <div className="text-[11px] font-mono text-cyan-400">Co-Founder</div>
             </div>
           </div>

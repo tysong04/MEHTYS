@@ -1,13 +1,13 @@
 # MEHTYS — Early-Stage Technology Venture
 
-Official website for **MEHTYS**, an independent, early-stage technology venture founded by **TYSON GARFIELD** and **MEHVISH (AJMERI)**, currently developing its first software products.
+Official website for **MEHTYS**, an independent, early-stage technology venture founded by **TYSON GARFIELD** and **AJMERI KHATOON**, currently developing its first software products.
 
 ---
 
 ## 👥 Co-Founders
 
 - **TYSON GARFIELD** — Co-Founder
-- **MEHVISH (AJMERI)** — Co-Founder
+- **AJMERI KHATOON** — Co-Founder
 
 ---
 

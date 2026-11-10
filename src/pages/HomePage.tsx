@@ -19,7 +19,7 @@ export const HomePage: React.FC = () => {
     <div className="pt-24 pb-16">
       <SEO 
         title="Early-Stage Technology Venture" 
-        description="MEHTYS is an independent, early-stage technology venture founded by Tyson Garfield and Mehvish (Ajmeri), currently developing its first products: MTCodeBridge (MTCB) and MTnote."
+        description="MEHTYS is an independent, early-stage technology venture founded by Tyson Garfield and Ajmeri Khatoon, currently developing its first products: MTCodeBridge (MTCB) and MTnote."
       />
 
       {/* Hero Section */}
@@ -60,7 +60,7 @@ export const HomePage: React.FC = () => {
                     <div className="text-xs font-mono text-cyan-400 mt-0.5">Co-Founder</div>
                   </div>
                   <div className="glass-panel p-4 rounded-xl border border-slate-800">
-                    <div className="font-bold text-white text-base">MEHVISH (AJMERI)</div>
+                    <div className="font-bold text-white text-base">AJMERI KHATOON</div>
                     <div className="text-xs font-mono text-cyan-400 mt-0.5">Co-Founder</div>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ export const HomePage: React.FC = () => {
                   Early-Stage Venture
                 </div>
                 <p className="text-xs text-slate-400 mt-3 font-light leading-relaxed">
-                  Founded by Tyson Garfield and Mehvish (Ajmeri).
+                  Founded by Tyson Garfield and Ajmeri Khatoon.
                 </p>
               </div>
             </div>
